@@ -1,0 +1,11 @@
+{
+  "name": "figteams",
+  "version": "1.0.0",
+  "description": "A webhook handler to pipe Figma comments to Microsoft Teams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rizqy H.",
+  "license": "MIT"
+}
