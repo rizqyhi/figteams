@@ -4,10 +4,11 @@
   "description": "A webhook handler to pipe Figma comments to Microsoft Teams",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "author": "Rizqy H.",
   "license": "MIT",
+  "type": "module",
   "devDependencies": {
     "jest": "^27.1.0"
   }
