@@ -14,4 +14,12 @@ describe('Generate Teams message payload', () => {
         expect(message.toPayload()).toHaveProperty('title', 'New comment');
         expect(message.toPayload()).toHaveProperty('summary', 'New comment summary');
     });
+
+    it('Should have one message section', () => {
+        const comment = new FigmaComment(commentStub);
+        const message = new TeamsMessageGenerator(comment);
+
+        expect(message.toPayload()).toHaveProperty('sections');
+        expect(message.toPayload().sections.length).toEqual(1);
+    });
 });
