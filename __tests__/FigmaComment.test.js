@@ -1,6 +1,8 @@
 import { expect } from '@jest/globals';
 import commentStub from './comment.stub';
 
+import FigmaComment from '../src/FigmaComment'
+
 test('Generate correct FigmaComment object', () => {
     const comment = new FigmaComment(commentStub);
 
