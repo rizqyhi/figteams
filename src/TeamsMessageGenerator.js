@@ -10,6 +10,7 @@ export default class TeamsMessageGenerator {
             themeColor: 'FF0000',
             title: 'New comment',
             summary: 'New comment summary',
+            sections: [{}]
         }
     }
 }
