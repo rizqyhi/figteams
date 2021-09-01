@@ -1,5 +1,6 @@
 import { describe, expect, it } from '@jest/globals';
 import commentStub from './comment.stub';
+import FigmaComment from '../src/FigmaComment';
 import TeamsMessageGenerator from '../src/TeamsMessageGenerator';
 
 describe('Generate Teams message payload', () => {
