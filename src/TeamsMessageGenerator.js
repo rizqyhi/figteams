@@ -10,7 +10,11 @@ export default class TeamsMessageGenerator {
             themeColor: 'FF0000',
             title: 'New comment',
             summary: 'New comment summary',
-            sections: [{}]
+            sections: [{
+                activityTitle: this.comment.commenterName(),
+                activitySubtitle: this.comment.formattedTimestamp(),
+                activityImage: this.comment.commenterAvatarUrl(),
+            }]
         }
     }
 }

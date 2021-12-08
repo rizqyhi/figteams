@@ -7,12 +7,20 @@ export default class FigmaComment {
         return this.rawComment.comment_id;
     }
 
+    formattedTimestamp() {
+        return this.rawComment.created_at;
+    }
+
     commenterId() {
         return this.rawComment.triggered_by.id;
     }
 
     commenterName() {
         return this.rawComment.triggered_by.handle;
+    }
+
+    commenterAvatarUrl() {
+        return this.rawComment.triggered_by.id;
     }
 
     fileKey() {
@@ -24,7 +32,7 @@ export default class FigmaComment {
     }
 
     comment() {
-        return this.rawComment.reduce((comment, segment) => {
+        return this.rawComment.comment.reduce((comment, segment) => {
             if (segment.mention) {
                 const mentioned = this.rawComment.mentions.find(user => user.id === segment.mention);
 
