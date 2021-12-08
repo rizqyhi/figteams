@@ -31,4 +31,11 @@ describe('Generate Teams message payload', () => {
         expect(message.toPayload().sections[0].activitySubtitle).toEqual(comment.formattedTimestamp());
         expect(message.toPayload().sections[0].activityImage).toEqual(comment.commenterAvatarUrl());
     });
+
+    it('Should have correctly formatted comment text', () => {
+        const comment = new FigmaComment(commentStub);
+        const message = new TeamsMessageGenerator(comment);
+
+        expect(message.toPayload().sections[0].text).toEqual(comment.comment());
+    });
 });
