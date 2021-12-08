@@ -14,6 +14,7 @@ export default class TeamsMessageGenerator {
                 activityTitle: this.comment.commenterName(),
                 activitySubtitle: this.comment.formattedTimestamp(),
                 activityImage: this.comment.commenterAvatarUrl(),
+                text: this.comment.comment(),
             }]
         }
     }
