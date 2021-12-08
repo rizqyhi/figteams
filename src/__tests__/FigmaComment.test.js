@@ -1,7 +1,7 @@
 import { expect } from '@jest/globals';
 import commentStub from './commentWebhook.stub.js';
 
-import FigmaComment from '../src/FigmaComment'
+import FigmaComment from '../FigmaComment.js'
 
 test('Generate correct FigmaComment object', () => {
     const comment = new FigmaComment(commentStub);

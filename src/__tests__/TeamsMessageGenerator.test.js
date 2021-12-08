@@ -1,7 +1,7 @@
 import { describe, expect, it } from '@jest/globals';
 import commentStub from './commentWebhook.stub.js';
-import FigmaComment from '../src/FigmaComment';
-import TeamsMessageGenerator from '../src/TeamsMessageGenerator';
+import FigmaComment from '../FigmaComment.js';
+import TeamsMessageGenerator from '../TeamsMessageGenerator.js';
 
 describe('Generate Teams message payload', () => {
     it('Should have basic metadata', () => {
