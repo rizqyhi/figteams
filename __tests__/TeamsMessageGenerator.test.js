@@ -38,4 +38,12 @@ describe('Generate Teams message payload', () => {
 
         expect(message.toPayload().sections[0].text).toEqual(comment.comment());
     });
+
+    it('Should have comment related information', () => {
+        const comment = new FigmaComment(commentStub);
+        const message = new TeamsMessageGenerator(comment);
+
+        expect(message.toPayload().sections[0].facts[0].name).toEqual('File');
+        expect(message.toPayload().sections[0].facts[0].value).toEqual(comment.fileName());
+    });
 });
