@@ -46,4 +46,20 @@ describe('Generate Teams message payload', () => {
         expect(message.toPayload().sections[0].facts[0].name).toEqual('File');
         expect(message.toPayload().sections[0].facts[0].value).toEqual(comment.fileName());
     });
+
+    it('Should have an action button to reply the comment on Figma', () => {
+        const comment = new FigmaComment(commentStub);
+        const message = new TeamsMessageGenerator(comment);
+
+        expect(message.toPayload().potentialAction[0]).toEqual({
+            '@type': 'OpenUri',
+            name: '💬 Reply Comment',
+            targets: [
+                {
+                    os: 'default',
+                    uri: 'https://www.figma.com/file/v06pMrorE7Pf4mj9r1zgxr?node-id=328:3397#102892172'
+                }
+            ]
+        });
+    });
 });
