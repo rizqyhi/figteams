@@ -1,10 +1,12 @@
 import { expect } from '@jest/globals';
 import commentStub from './commentWebhook.stub.js';
+import members from '../members.json';
 
 import FigmaComment from '../FigmaComment.js'
 
 test('Generate correct FigmaComment object', () => {
     const comment = new FigmaComment(commentStub);
+    const commenterAvatarUrl = members.find(member => member.id === comment.commenterId()).img_url;
 
     expect(comment.commentId()).toEqual('105026100');
     expect(comment.commenterId()).toEqual('887649301844316340');
@@ -12,4 +14,5 @@ test('Generate correct FigmaComment object', () => {
     expect(comment.fileKey()).toEqual('4L0DzgXXgAfjSrnsRsR1XP');
     expect(comment.fileName()).toEqual('Semicolon - Playground - Component Name Exploration');
     expect(comment.comment()).toEqual("Rizqy test\n");
+    expect(comment.commenterAvatarUrl()).toEqual(commenterAvatarUrl);
 });
