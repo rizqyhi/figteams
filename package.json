@@ -4,7 +4,8 @@
   "description": "A webhook handler to pipe Figma comments to Microsoft Teams",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --testPathIgnorePatterns /tests/ --testMatch \"**/?(*.)+(test).js\"",
+    "test:integration": "NODE_OPTIONS=--experimental-vm-modules jest ./tests"
   },
   "author": "Rizqy H.",
   "license": "MIT",
