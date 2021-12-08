@@ -18,6 +18,6 @@ describe('Send Teams notification', () => {
             headers: {'Content-Type': 'application/json'}
         });
 
-        await expect(response.ok).toBe(true);
+        expect(response.ok).toBe(true);
     });
 });
