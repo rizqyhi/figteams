@@ -22,5 +22,5 @@ test('When commenter avatar is not available, then should return fallback avatar
     const comment = new FigmaComment(commentStub);
 
     expect(comment.commenterId()).toEqual('123456789');
-    expect(comment.commenterAvatarUrl()).toEqual('');
+    expect(comment.commenterAvatarUrl()).toEqual('https://s3-alpha.figma.com/static/user_l_v2.png');
 });
