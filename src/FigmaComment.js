@@ -1,3 +1,5 @@
+import members from './members';
+
 export default class FigmaComment {
     constructor(rawComment) {
         this.rawComment = rawComment;
@@ -20,7 +22,7 @@ export default class FigmaComment {
     }
 
     commenterAvatarUrl() {
-        return this.rawComment.triggered_by.id;
+        return members.find(member => member.id === this.commenterId()).img_url || '';
     }
 
     fileKey() {
