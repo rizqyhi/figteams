@@ -15,6 +15,10 @@ export default class TeamsMessageGenerator {
                 activitySubtitle: this.comment.formattedTimestamp(),
                 activityImage: this.comment.commenterAvatarUrl(),
                 text: this.comment.comment(),
+                facts: [{
+                    name: 'File',
+                    value: this.comment.fileName()
+                }],
             }]
         }
     }
