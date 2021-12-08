@@ -19,6 +19,14 @@ export default class TeamsMessageGenerator {
                     name: 'File',
                     value: this.comment.fileName()
                 }],
+            }],
+            potentialAction: [{
+                '@type': 'OpenUri',
+                name: '💬 Reply Comment',
+                targets: [{
+                    os: 'default',
+                    uri: `https://www.figma.com/file/${this.comment.fileKey()}#${this.comment.commentId()}`
+                }]
             }]
         }
     }
