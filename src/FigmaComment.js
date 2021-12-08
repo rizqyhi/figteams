@@ -22,7 +22,9 @@ export default class FigmaComment {
     }
 
     commenterAvatarUrl() {
-        return members.find(member => member.id === this.commenterId()).img_url || '';
+        const member = members.find(member => member.id === this.commenterId());
+
+        return member ? member.img_url : '';
     }
 
     fileKey() {
