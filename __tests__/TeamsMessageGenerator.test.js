@@ -57,7 +57,7 @@ describe('Generate Teams message payload', () => {
             targets: [
                 {
                     os: 'default',
-                    uri: 'https://www.figma.com/file/v06pMrorE7Pf4mj9r1zgxr?node-id=328:3397#102892172'
+                    uri: 'https://www.figma.com/file/4L0DzgXXgAfjSrnsRsR1XP#105026100'
                 }
             ]
         });
