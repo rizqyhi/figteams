@@ -42,4 +42,8 @@ export default class FigmaComment {
             return comment + segment.text;
         }, '');
     }
+
+    replyUrl() {
+        return `https://www.figma.com/file/${this.fileKey()}#${this.commentId()}`;
+    }
 }

@@ -25,7 +25,7 @@ export default class TeamsMessageGenerator {
                 name: '💬 Reply Comment',
                 targets: [{
                     os: 'default',
-                    uri: `https://www.figma.com/file/${this.comment.fileKey()}#${this.comment.commentId()}`
+                    uri: this.comment.replyUrl()
                 }]
             }]
         }
