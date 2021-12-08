@@ -23,8 +23,11 @@ export default class FigmaComment {
 
     commenterAvatarUrl() {
         const member = members.find(member => member.id === this.commenterId());
+        const commenterNameFirstLetter = this.commenterName().toLowerCase().substring(0, 1)
 
-        return member ? member.img_url : '';
+        return member
+            ? member.img_url
+            : `https://s3-alpha.figma.com/static/user_${commenterNameFirstLetter}_v2.png`;
     }
 
     fileKey() {
