@@ -5,9 +5,9 @@ import { sendMessage } from '../src/TeamsMessageSender';
 export default function handler(request, response) {
     const comment = new FigmaComment(request.body);
     const message = new TeamsMessageGenerator(comment);
-    const response = await sendMessage(message);
+    const webhookResponse = await sendMessage(message);
     
-    if (response.ok) {
+    if (webhookResponse.ok) {
         response.status(200).send('OK');
     } else {
         response.status(400).send('FAILED');
