@@ -1,4 +1,4 @@
-import members from './members';
+import members from './members.js';
 
 export default class FigmaComment {
     constructor(rawComment) {

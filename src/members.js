@@ -1,4 +1,4 @@
-[
+export default [
     {
         "id": "822313887870191608",
         "img_url": "https://www.gravatar.com/avatar/4283da53b69bb370f8e226abb3bb7da7?size=240&default=https%3A%2F%2Fs3-alpha.figma.com%2Fstatic%2Fuser_h_v2.png"

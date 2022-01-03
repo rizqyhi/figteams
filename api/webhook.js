@@ -1,8 +1,8 @@
-import FigmaComment from '../src/FigmaComment';
-import TeamsMessageGenerator from '../src/TeamsMessageGenerator';
-import { sendMessage } from '../src/TeamsMessageSender';
+import FigmaComment from '../src/FigmaComment.js';
+import TeamsMessageGenerator from '../src/TeamsMessageGenerator.js';
+import { sendMessage } from '../src/TeamsMessageSender.js';
 
-export default function handler(request, response) {
+export default async function handler(request, response) {
     const comment = new FigmaComment(request.body);
     const message = new TeamsMessageGenerator(comment);
     const webhookResponse = await sendMessage(message);
