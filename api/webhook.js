@@ -3,6 +3,7 @@ import TeamsMessageGenerator from '../src/TeamsMessageGenerator.js';
 import { sendMessage } from '../src/TeamsMessageSender.js';
 
 export default async function handler(request, response) {
+    console.log(request)
     try {
         const comment = new FigmaComment(request.body);
         const message = new TeamsMessageGenerator(comment);
