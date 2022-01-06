@@ -10,6 +10,10 @@ function isValidRequest(request) {
     if (!request.body) {
         throw Error('EMPTY_BODY');
     }
+
+    if (!request.body.passcode || request.body.passcode !== process.env.WEBHOOK_PASSCODE) {
+        throw Error('INVALID_PASSCODE');
+    }
 }
 
 export default async function handler(request, response) {
