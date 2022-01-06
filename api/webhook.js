@@ -6,6 +6,10 @@ function isValidRequest(request) {
     if (request.method !== 'POST') {
         throw Error('INVALID_METHOD');
     }
+
+    if (!request.body) {
+        throw Error('EMPTY_BODY');
+    }
 }
 
 export default async function handler(request, response) {
