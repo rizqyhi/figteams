@@ -17,7 +17,6 @@ function isValidRequest(request) {
 }
 
 export default async function handler(request, response) {
-    console.log(request.method, request.body)
     if (request.method === 'OPTIONS') {
         return response.status(200).send('OK');
     }
